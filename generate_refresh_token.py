@@ -21,7 +21,7 @@ link = 'https://accounts.google.com/o/oauth2/token'
 ###############
 class Auth(Resource):
  def get(self):
-   redirect_url = 'https://accounts.google.com/o/oauth2/auth?scope=https%%3A%%2F%%2Fwww.google.com%%2Fm8%%2Ffeeds+https%%3A%%2F%%2Fwww.googleapis.com%%2Fauth%%2Fgmail.readonly&response_type=code&client_id=%s&redirect_uri=http://localhost:8080/oauth2callback&access_type=offline&approval_prompt=force' % (client_id)
+   redirect_url = 'https://accounts.google.com/o/oauth2/auth?scope=https://www.googleapis.com/auth/drive.photos.readonly&response_type=code&client_id=%s&redirect_uri=http://localhost:8080/oauth2callback&access_type=offline&approval_prompt=force' % (client_id)
    return redirect(redirect_url)
 
 
